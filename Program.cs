@@ -1,16 +1,7 @@
 using KikuChatbotWrapper.RestApiHelper;
 using KikuChatbotWrapper.Services;
 
-var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy(name: MyAllowSpecificOrigins,
-                      policy =>
-                      {
-                          policy.WithOrigins("http://kiku-chatbot-webapp.s3-website-ap-northeast-1.amazonaws.com");
-                      });
-});
 
 // Add services to the container.
 
@@ -33,7 +24,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(MyAllowSpecificOrigins);
+app.UseCors(x => x
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => true) // allow any origin
+                                        //.WithOrigins("https://localhost:44351")); // Allow only this origin can also have multiple origins separated with comma
+    .AllowCredentials());
 
 app.UseHttpsRedirection();
 
