@@ -12,6 +12,7 @@
 	<ContainerImageTags>latest</ContainerImageTags>
 	<PublishProfile>DefaultContainer</PublishProfile>
 	<RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+<UseAppHost>true</UseAppHost>
   </PropertyGroup>
 
   <ItemGroup>
