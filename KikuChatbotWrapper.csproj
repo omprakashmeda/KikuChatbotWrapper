@@ -8,7 +8,7 @@
     <UserSecretsId>ba3a57fe-a8c3-4d8f-9154-0d60ac9e1b06</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
-	<ContainerImageName>products-crud-api</ContainerImageName>
+	<ContainerImageName>kiku-chatbot-wrapper-api</ContainerImageName>
 	<ContainerImageTags>latest</ContainerImageTags>
 	<PublishProfile>DefaultContainer</PublishProfile>
 	<RuntimeIdentifier>linux-x64</RuntimeIdentifier>
