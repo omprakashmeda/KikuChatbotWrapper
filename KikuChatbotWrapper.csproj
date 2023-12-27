@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -11,8 +11,6 @@
 	<ContainerImageName>kiku-chatbot-wrapper-api</ContainerImageName>
 	<ContainerImageTags>latest</ContainerImageTags>
 	<PublishProfile>DefaultContainer</PublishProfile>
-	<RuntimeIdentifier>linux-x64</RuntimeIdentifier>
-<SelfContained>true</SelfContained>
   </PropertyGroup>
 
   <ItemGroup>
