@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>ba3a57fe-a8c3-4d8f-9154-0d60ac9e1b06</UserSecretsId>
