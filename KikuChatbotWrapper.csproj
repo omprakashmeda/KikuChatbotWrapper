@@ -8,6 +8,8 @@
     <UserSecretsId>ba3a57fe-a8c3-4d8f-9154-0d60ac9e1b06</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
+    <SelfContained>true</SelfContained>
+    <UseAppHost>true</UseAppHost>
   </PropertyGroup>
 
   <ItemGroup>
