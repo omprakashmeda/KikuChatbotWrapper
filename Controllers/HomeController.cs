@@ -37,5 +37,16 @@ namespace KikuChatbotWrapper.Controllers
 
             return response != null ? Ok(response) : BadRequest(new CreateSessionErrorResponse { error = "Session already exists" });
         }
+
+        [HttpPost]
+        [Route("delete_session")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(CreateSessionErrorResponse), StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> DeleteSession([FromBody] CreateSessionRequest request)
+        {
+            var response = await _chatbotService.DeleteSession(request);
+
+            return response ? Ok( new { success =true, message = "Session deleted successfully" }) : BadRequest(new CreateSessionErrorResponse { error = "Session not found" });
+        }
     }
 }

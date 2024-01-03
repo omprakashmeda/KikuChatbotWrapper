@@ -42,5 +42,22 @@ namespace KikuChatbotWrapper.Services
             }
             return response;
         }
+        public async Task<bool> DeleteSession(CreateSessionRequest request)
+        {
+            bool result = false;
+            try
+            {
+                var url = new Uri($"{_baseUrl}/chatbot/delete_session_from_user/");
+
+                var response = await _restClientHelper.PostAsync<DeleteSessionResponse, CreateSessionRequest>(url, request);
+
+                result = response != null;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return result;
+        }
     }
 }
